@@ -5,7 +5,7 @@
 # created by
 - Daniel Der A01369032
 - [Team Member 2]
-- [Team Member 3]
+- Ben Louis A01344841
 
 # Class + Set
 - COMP-2170-0
