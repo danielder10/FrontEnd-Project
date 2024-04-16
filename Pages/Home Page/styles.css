@@ -1,0 +1,24 @@
+.RPS{
+    color: Blue;
+    align-items: center;
+}
+
+a {
+    color: red; 
+    text-decoration: none; 
+}
+
+button {
+    width: 100px; 
+    height: 100px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.BodyContainer{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
