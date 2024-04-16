@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatiable" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial">
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div id="gameDiv">
+    <h1 class="gameText" id="playerText">Player: </h1>
+    <h1 class="gameText" id="computerText">Computer: </h1>
+
+    <button onClick="checker('rock'); displayRock()">Rock</button>
+    <button onClick="checker('paper'); displayPaper()"> Paper</button>
+    <button onClick="checker('scissor'); displayScissors()">Scissor</button>
+    <p id="result">
+    </p>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
