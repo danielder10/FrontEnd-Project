@@ -1,10 +1,8 @@
-# How to run
-- ndkna
-- dbaidiabd
+# Title
 
-# created by
+# Created By
 - Daniel Der A01369032
-- [Team Member 2]
+- Evan Schatz A01366237
 - Ben Louis A01344841
 
 # Class + Set
