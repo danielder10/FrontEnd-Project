@@ -1,0 +1,35 @@
+.BJContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tableContainer{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.seat{
+    width: 15rem;
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonContainer{
+    display: flex;
+    margin: 2rem;
+    padding: 1rem;
+}
+
+.actionButton{
+    width: 5rem;
+    padding:1rem;
+    margin: 2rem;
+}
