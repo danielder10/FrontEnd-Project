@@ -1,0 +1,184 @@
+/*Hair*/
+.hairOne {
+    position: absolute;
+    
+    width: 800px;
+    height: 1400px;
+    background-image: url("./img/dressup_0002s_0000_BlackHair.png");
+    z-index: 5;
+}
+
+.hairTwo {
+    position: absolute;
+    
+    width: 800px;
+    height: 1400px;
+    background-image: url("./img/dressup_0002s_0003_SpikeHair.png");
+    z-index: 5;
+}
+
+.hairThree {
+    position: absolute;
+    
+    width: 800px;
+    height: 1400px;
+    background-image: url("./img/dressup_0002s_0004_BaldHair.png");
+    z-index: 5;
+}
+
+.hairFour {
+    position: absolute;
+    
+    width: 800px;
+    height: 1400px;
+    background-image: url("./img/dressup_0002s_0001_PurpleHair.png");
+    z-index: 5;
+}
+
+.hairFive {
+    position: absolute;
+    
+    width: 800px;
+    height: 1400px;
+    background-image: url("./img/dressup_0002s_0002_BowlHair.png");
+    z-index: 5;
+}
+
+/*Eyes*/
+.eyeOne {
+    position: absolute;
+    
+    width: 800px;
+    height: 1400px;
+    background-image: url("./img/dressup_0003s_0003_NormalEye.png");
+    z-index: 5;
+}
+
+.eyeTwo {
+    position: absolute;
+    
+    width: 800px;
+    height: 1400px;
+    background-image: url("./img/dressup_0003s_0000_DotEye.png");
+    z-index: 5;
+}
+
+.eyeThree {
+    position: absolute;
+    
+    width: 800px;
+    height: 1400px;
+    background-image: url("./img/dressup_0003s_0002_SoftEye.png");
+    z-index: 5;
+}
+
+.eyeFour {
+    position: absolute;
+    
+    width: 800px;
+    height: 1400px;
+    background-image: url("./img/dressup_0003s_0001_AngryEye.png");
+    z-index: 5;
+}
+
+/*Clothes*/
+.clothesOne {
+    position: absolute;
+    
+    width: 800px;
+    height: 1400px;
+    background-image: url("./img/dressup_0001s_0002_DefaultShirt.png");
+    z-index: 5;
+}
+
+.clothesTwo {
+    position: absolute;
+    
+    width: 800px;
+    height: 1400px;
+    background-image: url("./img/dressup_0001s_0001_VestShirt.png");
+    z-index: 5;
+}
+
+.clothesThree {
+    position: absolute;
+    
+    width: 800px;
+    height: 1400px;
+    background-image: url("./img/dressup_0001s_0000_SweaterShirt.png");
+    z-index: 5;
+}
+
+/*Pants*/
+
+.pantsOne {
+    position: absolute;
+    
+    width: 800px;
+    height: 1400px;
+    background-image: url("./img/dressup_0000s_0000_LongPants.png");
+    z-index: 5;
+}
+
+.pantsTwo {
+    position: absolute;
+    
+    width: 800px;
+    height: 1400px;
+    background-image: url("./img/dressup_0000s_0001_ShortsPants.png");
+    z-index: 5;
+}
+
+/*Container*/
+
+#bodyContainer {
+    transform: scale(0.8);
+}
+
+#background {}
+
+#hair {
+    position: absolute;
+    
+    width: 800px;
+    height: 1400px;
+    z-index: 5;
+}
+
+#eyes {
+    position: absolute;
+    
+    width: 800px;
+    height: 1400px;
+    background-image: url("./img/dressup_0003s_0003_NormalEye.png");
+    z-index: 1;
+}
+
+#clothes {
+    position: absolute;
+    
+    width: 800px;
+    height: 1400px;
+    background-image: url("./img/dressup_0001s_0001_VestShirt.png");
+    z-index: 5;
+}
+
+#pants {
+    position: absolute;
+    
+    width: 800px;
+    height: 1400px;
+    background-image: url("./img/dressup_0000s_0000_LongPants.png");
+    z-index: 4;
+}
+
+#body {
+    position: absolute;
+
+    width: 800px;
+    height: 1400px;
+    background-image: url("./img/dressup_0004s_0000_Base.png");
+    border: 1px solid red
+}
+
+/*Page Elements*/
