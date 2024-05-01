@@ -4,7 +4,7 @@
     
     width: 800px;
     height: 1400px;
-    background-image: url("./img/dressup_0002s_0000_BlackHair.png");
+    background-image: url("./img/dressup_0002s_0004_BaldHair.png");
     z-index: 5;
 }
 
@@ -22,7 +22,7 @@
     
     width: 800px;
     height: 1400px;
-    background-image: url("./img/dressup_0002s_0004_BaldHair.png");
+    background-image: url("./img/dressup_0002s_0000_BlackHair.png");
     z-index: 5;
 }
 
@@ -45,7 +45,7 @@
 }
 
 /*Eyes*/
-.eyeOne {
+.eyesOne {
     position: absolute;
     
     width: 800px;
@@ -54,7 +54,7 @@
     z-index: 5;
 }
 
-.eyeTwo {
+.eyesTwo {
     position: absolute;
     
     width: 800px;
@@ -63,7 +63,7 @@
     z-index: 5;
 }
 
-.eyeThree {
+.eyesThree {
     position: absolute;
     
     width: 800px;
@@ -72,7 +72,7 @@
     z-index: 5;
 }
 
-.eyeFour {
+.eyesFour {
     position: absolute;
     
     width: 800px;
@@ -117,7 +117,7 @@
     width: 800px;
     height: 1400px;
     background-image: url("./img/dressup_0000s_0000_LongPants.png");
-    z-index: 5;
+    z-index: -1;
 }
 
 .pantsTwo {
@@ -126,7 +126,26 @@
     width: 800px;
     height: 1400px;
     background-image: url("./img/dressup_0000s_0001_ShortsPants.png");
-    z-index: 5;
+    z-index: -1;
+}
+
+/*Accessories*/
+.accessoryOne {
+    position: absolute;
+    
+    width: 800px;
+    height: 1400px;
+    background-image: url("./img/dressup_0005s_0001_WolfAcc.png");
+    z-index: -5;
+}
+
+.accessoryTwo {
+    position: absolute;
+    
+    width: 800px;
+    height: 1400px;
+    background-image: url("./img/dressup_0005s_0000_AlienAcc.png");
+    z-index: -5;
 }
 
 /*Container*/
@@ -150,7 +169,6 @@
     
     width: 800px;
     height: 1400px;
-    background-image: url("./img/dressup_0003s_0003_NormalEye.png");
     z-index: 1;
 }
 
@@ -159,7 +177,6 @@
     
     width: 800px;
     height: 1400px;
-    background-image: url("./img/dressup_0001s_0001_VestShirt.png");
     z-index: 5;
 }
 
@@ -168,7 +185,6 @@
     
     width: 800px;
     height: 1400px;
-    background-image: url("./img/dressup_0000s_0000_LongPants.png");
     z-index: 4;
 }
 
