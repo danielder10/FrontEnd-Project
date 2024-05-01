@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
 /*Hair*/
 .hairOne {
     position: absolute;
@@ -154,7 +156,24 @@
     transform: scale(0.8);
 }
 
-#background {}
+#background {
+    position: absolute;
+    
+    width: 800px;
+    height: 1400px;
+    background-image: url("./img/bg.png");
+    background-color: #c1d7ec8a;
+    border-radius: 100px;
+}
+
+#backgroundAccent {
+    position: absolute;
+
+    width: 800px;
+    height: 1400px;
+    background-image: url("./img/bg Accent.png");
+    z-index: 10;
+}
 
 #hair {
     position: absolute;
@@ -194,7 +213,85 @@
     width: 800px;
     height: 1400px;
     background-image: url("./img/dressup_0004s_0000_Base.png");
-    border: 1px solid red
 }
 
 /*Page Elements*/
+:root {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    
+    background-color: #dae5e8;
+    color: #e6e1d8;
+}
+
+#video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -5;
+}
+
+h1 {
+    font-family: "Jersey 10", sans-serif;
+    font-size: 5rem;
+    font-kerning: normal;
+    margin: 1rem auto;
+
+    animation: float 3s infinite ease-in-out;
+}
+
+body {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.gameContent {
+    display: flex;
+    flex-direction: row;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 8rem;
+}
+
+/*Button*/
+.clothesButton {
+    padding: 1rem 2rem;
+    margin: 1rem;
+
+    border-radius: 0 20px 0 20px;
+    border: 0.2rem solid rgb(153, 172, 238);
+    font-family: "Jersey 10", sans-serif;
+    font-size: 3rem;
+
+    background: #0d0e12;
+    color: #e6e1d8;
+}
+
+.clothesButton:hover {
+    background: #d66596;
+    cursor: pointer;
+}
+
+/*Animation*/
+
+@keyframes float {
+    0% {
+        transform: translateY(-100px);
+    }
+    50%{
+        transform: translateY(0px);
+
+    }
+    100% {
+        transform: translateY(-100px);
+
+    }
+}

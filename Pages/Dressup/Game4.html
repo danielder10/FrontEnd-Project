@@ -10,24 +10,35 @@
 </head>
 
 <body>
+  <video autoplay muted loop id="video">
+    <source src="./videos/Background_1.mp4" type="video/mp4">
+  </video>
   <div>
     <button><a href="../Home Page/index.html">Back</a></button>
   </div>
-  <button id="changeHair">Change Hair</button>
-  <button id="changeEyes">Change Eyes</button>
-  <button id="changeClothes">Change Clothes</button>
-  <button id="changePants">Change Pants</button>
-  <button id="changeAccessories">Change Accessories</button>
-  <div id="bodyContainer">
-    <div id="background">
-      <div id="hair"></div>
-      <div id="eyes"></div>
-      <div id="clothes"></div>
-      <div id="pants"></div>
-      <div id="body"></div>
-      <div id="accessories"></div>
+  <div class="gameContent">
+    <div class="buttonContainer">
+      <h1>Dress Up!</h1>
+      <button id="changeHair" class="clothesButton">Change Hair</button>
+      <button id="changeEyes" class="clothesButton">Change Eyes</button>
+      <button id="changeClothes" class="clothesButton">Change Clothes</button>
+      <button id="changePants" class="clothesButton">Change Pants</button>
+      <button id="changeAccessories" class="clothesButton">Change Accessories</button>
+    </div>
+    <div id="bodyContainer">
+      <div id="background">
+        <div id="backgroundAccent">
+          <div id="hair"></div>
+          <div id="eyes"></div>
+          <div id="clothes"></div>
+          <div id="pants"></div>
+          <div id="body"></div>
+          <div id="accessories"></div>
+        </div>
+      </div>
     </div>
   </div>
+
 
   <!-- <div id="demo" style="height: 250px; width: 100px; background-color: red;">oooguyfsdhfuahjfsj</div> -->
 
