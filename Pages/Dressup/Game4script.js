@@ -75,28 +75,38 @@ const updateHair = () => {
   switch (hairCount) {
     case 0:
       document.getElementById("hair").classList.remove("hairFive")
-      document.getElementById("hair").classList.add("")
+      document.getElementById("currentHair").innerHTML = "Bald!";
       break;
     case 1:
       document.getElementById("hair").classList.add("hairOne")
+      document.getElementById("currentHair").innerHTML = "Almost Bald!";
+
       break;
     case 2:
       document.getElementById("hair").classList.remove("hairOne")
       document.getElementById("hair").classList.add("hairTwo")
+      document.getElementById("currentHair").innerHTML = "Spiky!";
+
       break;
     case 3:
       document.getElementById("hair").classList.remove("hairTwo")
       document.getElementById("hair").classList.add("hairThree")
+      document.getElementById("currentHair").innerHTML = "Black Hair!";
+
       break;
     case 4:
       document.getElementById("hair").classList.remove("hairThree")
       document.getElementById("hair").classList.add("hairFour")
+      document.getElementById("currentHair").innerHTML = "Purple Hair!";
+
       break;
     case 5:
       document.getElementById("hair").classList.remove("hairFour")
       document.getElementById("hair").classList.add("hairFive")
+      document.getElementById("currentHair").innerHTML = "Bowl Cut!";
       break;
     default:
+      document.getElementById("currentHair").innerHTML = "Bald!";
       break;
   }
 }
@@ -199,9 +209,10 @@ const clothesButton = document.querySelector("#changeClothes");
 const pantsButton = document.querySelector("#changePants");
 const accessoriesButton = document.querySelector("#changeAccessories")
 
+const currentHair = document.querySelector("#currentHair")
+
 hairButton.addEventListener("click", hairRotate);
 eyesButton.addEventListener("click", eyesRotate);
 clothesButton.addEventListener("click", clothesRotate);
 pantsButton.addEventListener("click", pantsRotate);
 accessoriesButton.addEventListener("click", accessoryRotate)
-

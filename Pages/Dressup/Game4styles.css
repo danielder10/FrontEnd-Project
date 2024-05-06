@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 /*Hair*/
 .hairOne {
     position: absolute;
-    
+
     width: 800px;
     height: 1400px;
     background-image: url("./img/dressup_0002s_0004_BaldHair.png");
@@ -12,7 +12,7 @@
 
 .hairTwo {
     position: absolute;
-    
+
     width: 800px;
     height: 1400px;
     background-image: url("./img/dressup_0002s_0003_SpikeHair.png");
@@ -21,7 +21,7 @@
 
 .hairThree {
     position: absolute;
-    
+
     width: 800px;
     height: 1400px;
     background-image: url("./img/dressup_0002s_0000_BlackHair.png");
@@ -30,7 +30,7 @@
 
 .hairFour {
     position: absolute;
-    
+
     width: 800px;
     height: 1400px;
     background-image: url("./img/dressup_0002s_0001_PurpleHair.png");
@@ -39,7 +39,7 @@
 
 .hairFive {
     position: absolute;
-    
+
     width: 800px;
     height: 1400px;
     background-image: url("./img/dressup_0002s_0002_BowlHair.png");
@@ -49,7 +49,7 @@
 /*Eyes*/
 .eyesOne {
     position: absolute;
-    
+
     width: 800px;
     height: 1400px;
     background-image: url("./img/dressup_0003s_0003_NormalEye.png");
@@ -58,7 +58,7 @@
 
 .eyesTwo {
     position: absolute;
-    
+
     width: 800px;
     height: 1400px;
     background-image: url("./img/dressup_0003s_0000_DotEye.png");
@@ -67,7 +67,7 @@
 
 .eyesThree {
     position: absolute;
-    
+
     width: 800px;
     height: 1400px;
     background-image: url("./img/dressup_0003s_0002_SoftEye.png");
@@ -76,7 +76,7 @@
 
 .eyesFour {
     position: absolute;
-    
+
     width: 800px;
     height: 1400px;
     background-image: url("./img/dressup_0003s_0001_AngryEye.png");
@@ -86,7 +86,7 @@
 /*Clothes*/
 .clothesOne {
     position: absolute;
-    
+
     width: 800px;
     height: 1400px;
     background-image: url("./img/dressup_0001s_0002_DefaultShirt.png");
@@ -95,7 +95,7 @@
 
 .clothesTwo {
     position: absolute;
-    
+
     width: 800px;
     height: 1400px;
     background-image: url("./img/dressup_0001s_0001_VestShirt.png");
@@ -104,7 +104,7 @@
 
 .clothesThree {
     position: absolute;
-    
+
     width: 800px;
     height: 1400px;
     background-image: url("./img/dressup_0001s_0000_SweaterShirt.png");
@@ -115,7 +115,7 @@
 
 .pantsOne {
     position: absolute;
-    
+
     width: 800px;
     height: 1400px;
     background-image: url("./img/dressup_0000s_0000_LongPants.png");
@@ -124,7 +124,7 @@
 
 .pantsTwo {
     position: absolute;
-    
+
     width: 800px;
     height: 1400px;
     background-image: url("./img/dressup_0000s_0001_ShortsPants.png");
@@ -134,7 +134,7 @@
 /*Accessories*/
 .accessoryOne {
     position: absolute;
-    
+
     width: 800px;
     height: 1400px;
     background-image: url("./img/dressup_0005s_0001_WolfAcc.png");
@@ -143,32 +143,73 @@
 
 .accessoryTwo {
     position: absolute;
-    
+
     width: 800px;
     height: 1400px;
     background-image: url("./img/dressup_0005s_0000_AlienAcc.png");
     z-index: -5;
 }
 
+/*Page Elements*/
+:root {
+    height: 100vh;
+    width: 100vw;
+
+    background-color: #dae5e8;
+    color: #e6e1d8;
+}
+
+#video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1000;
+}
+
+h1 {
+    font-family: "Inter", sans-serif;
+    font-size: 5rem;
+    font-kerning: normal;
+    margin: 1rem auto;
+
+    animation: float 3s infinite ease-in-out;
+}
+
+body {
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.gameContent {
+    display: flex;
+    flex-direction: row;
+}
+
 /*Container*/
 
 #bodyContainer {
-    transform: scale(0.8);
+    width: 400px;
+    height: 700px;
+    transform: scale(0.5);
 }
 
 #background {
     position: absolute;
-    
+
     width: 800px;
     height: 1400px;
     background-image: url("./img/bg.png");
     background-color: #c1d7ec8a;
     border-radius: 100px;
+    z-index: -500;
 }
 
 #backgroundAccent {
-    position: absolute;
-
     width: 800px;
     height: 1400px;
     background-image: url("./img/bg Accent.png");
@@ -177,7 +218,7 @@
 
 #hair {
     position: absolute;
-    
+
     width: 800px;
     height: 1400px;
     z-index: 5;
@@ -185,7 +226,7 @@
 
 #eyes {
     position: absolute;
-    
+
     width: 800px;
     height: 1400px;
     z-index: 1;
@@ -193,7 +234,7 @@
 
 #clothes {
     position: absolute;
-    
+
     width: 800px;
     height: 1400px;
     z-index: 5;
@@ -201,7 +242,7 @@
 
 #pants {
     position: absolute;
-    
+
     width: 800px;
     height: 1400px;
     z-index: 4;
@@ -215,61 +256,22 @@
     background-image: url("./img/dressup_0004s_0000_Base.png");
 }
 
-/*Page Elements*/
-:root {
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-    
-    background-color: #dae5e8;
-    color: #e6e1d8;
-}
-
-#video {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -5;
-}
-
-h1 {
-    font-family: "Jersey 10", sans-serif;
-    font-size: 5rem;
-    font-kerning: normal;
-    margin: 1rem auto;
-
-    animation: float 3s infinite ease-in-out;
-}
-
-body {
-    display: flex;
-    justify-self: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.gameContent {
-    display: flex;
-    flex-direction: row;
-}
-
+/*Button*/
 .buttonContainer {
     display: flex;
     flex-direction: column;
     margin: 8rem;
 }
 
-/*Button*/
 .clothesButton {
     padding: 1rem 2rem;
     margin: 1rem;
 
     border-radius: 0 20px 0 20px;
     border: 0.2rem solid rgb(153, 172, 238);
-    font-family: "Jersey 10", sans-serif;
-    font-size: 3rem;
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
 
     background: #0d0e12;
     color: #e6e1d8;
@@ -280,16 +282,27 @@ body {
     cursor: pointer;
 }
 
+.label {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.currentHair {
+    font-weight: 200;
+}
+
 /*Animation*/
 
 @keyframes float {
     0% {
         transform: translateY(-100px);
     }
-    50%{
+
+    50% {
         transform: translateY(0px);
 
     }
+
     100% {
         transform: translateY(-100px);
 

@@ -3,43 +3,49 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatiable" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dress Up!</title>
   <link rel="stylesheet" href="./Game4styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="appBody">
   <video autoplay muted loop id="video">
     <source src="./videos/Background_1.mp4" type="video/mp4">
   </video>
-  <div>
-    <button><a href="../Home Page/index.html">Back</a></button>
-  </div>
-  <div class="gameContent">
-    <div class="buttonContainer">
-      <h1>Dress Up!</h1>
-      <button id="changeHair" class="clothesButton">Change Hair</button>
-      <button id="changeEyes" class="clothesButton">Change Eyes</button>
-      <button id="changeClothes" class="clothesButton">Change Clothes</button>
-      <button id="changePants" class="clothesButton">Change Pants</button>
-      <button id="changeAccessories" class="clothesButton">Change Accessories</button>
+  <div class="pageContent">
+    <div>
+      <button><a href="../Home Page/index.html">Back</a></button>
     </div>
-    <div id="bodyContainer">
-      <div id="background">
-        <div id="backgroundAccent">
-          <div id="hair"></div>
-          <div id="eyes"></div>
-          <div id="clothes"></div>
-          <div id="pants"></div>
-          <div id="body"></div>
-          <div id="accessories"></div>
+    <div class="gameContent">
+      <div class="buttonContainer">
+        <h1>Dress Up!</h1>
+        <button id="changeHair" class="clothesButton">
+          Change Hair
+          <p class="label">Current Hair: <i id="currentHair"></i></p>
+        </button>
+        <button id="changeEyes" class="clothesButton">Change Eyes</button>
+        <button id="changeClothes" class="clothesButton">Change Clothes</button>
+        <button id="changePants" class="clothesButton">Change Pants</button>
+        <button id="changeAccessories" class="clothesButton">Change Accessories</button>
+      </div>
+      <div id="bodyContainer">
+        <div id="background">
+          <div id="backgroundAccent">
+            <div id="hair"></div>
+            <div id="eyes"></div>
+            <div id="clothes"></div>
+            <div id="pants"></div>
+            <div id="body"></div>
+            <div id="accessories"></div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-
-
   <!-- <div id="demo" style="height: 250px; width: 100px; background-color: red;">oooguyfsdhfuahjfsj</div> -->
 
   <script src="./Game4script.js"></script>
