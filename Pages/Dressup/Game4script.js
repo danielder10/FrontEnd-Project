@@ -115,24 +115,31 @@ const updateEyes = () => {
   switch (eyesCount) {
     case 0:
       document.getElementById("eyes").classList.remove("eyesFour")
-      document.getElementById("eyes").classList.add("")
+      document.getElementById("currentEyes").innerHTML = "none!";
       break;
     case 1:
       document.getElementById("eyes").classList.add("eyesOne")
+      document.getElementById("currentEyes").innerHTML = "Blue!";
+
       break;
     case 2:
       document.getElementById("eyes").classList.remove("eyesOne")
       document.getElementById("eyes").classList.add("eyesTwo")
+      document.getElementById("currentEyes").innerHTML = "Green!";
+
       break;
     case 3:
       document.getElementById("eyes").classList.remove("eyesTwo")
       document.getElementById("eyes").classList.add("eyesThree")
+      document.getElementById("currentEyes").innerHTML = "Yellow!";
       break;
     case 4:
       document.getElementById("eyes").classList.remove("eyesThree")
       document.getElementById("eyes").classList.add("eyesFour")
+      document.getElementById("currentEyes").innerHTML = "Red!";
       break;
     default:
+      document.getElementById("currentEyes").innerHTML = "none!";
       break;
   }
 }
@@ -141,20 +148,25 @@ const updateClothes = () => {
   switch (clothesCount) {
     case 0:
       document.getElementById("clothes").classList.remove("clothesThree")
-      document.getElementById("clothes").classList.add("")
+      document.getElementById("currentClothes").innerHTML = "none!";
+
       break;
     case 1:
       document.getElementById("clothes").classList.add("clothesOne")
+      document.getElementById("currentClothes").innerHTML = "T-shirt!";
       break;
     case 2:
       document.getElementById("clothes").classList.remove("clothesOne")
       document.getElementById("clothes").classList.add("clothesTwo")
+      document.getElementById("currentClothes").innerHTML = "Fancy!";
       break;
     case 3:
       document.getElementById("clothes").classList.remove("clothesTwo")
       document.getElementById("clothes").classList.add("clothesThree")
+      document.getElementById("currentClothes").innerHTML = "Sweater!";
       break;
     default:
+      document.getElementById("currentClothes").innerHTML = "none!";
       break;
   }
 }
@@ -163,16 +175,19 @@ const updatePants = () => {
   switch (pantsCount) {
     case 0:
       document.getElementById("pants").classList.remove("pantsTwo")
-      document.getElementById("pants").classList.add("")
+      document.getElementById("currentPants").innerHTML = "none!";
       break;
     case 1:
       document.getElementById("pants").classList.add("pantsOne")
+      document.getElementById("currentPants").innerHTML = "Long!";
       break;
     case 2:
       document.getElementById("pants").classList.remove("pantsOne")
       document.getElementById("pants").classList.add("pantsTwo")
+      document.getElementById("currentPants").innerHTML = "Shorts!";
       break;
     default:
+      document.getElementById("currentPants").innerHTML = "none!";
       break;
   }
 }
@@ -181,14 +196,16 @@ const updateAccessories = () => {
   switch (AccessoriesCount) {
     case 0:
       document.getElementById("accessories").classList.remove("accessoryTwo")
-      document.getElementById("accessories").classList.add("")
+      document.getElementById("currentAccessories").innerHTML = "none!";
       break;
     case 1:
       document.getElementById("accessories").classList.add("accessoryOne")
+      document.getElementById("currentAccessories").innerHTML = "Wolf!";
       break;
     case 2:
       document.getElementById("accessories").classList.remove("accessoryOne")
       document.getElementById("accessories").classList.add("accessoryTwo")
+      document.getElementById("currentAccessories").innerHTML = "Alien!";
       break;
     default:
       break;

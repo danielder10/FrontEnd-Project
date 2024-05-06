@@ -159,6 +159,41 @@
     color: #e6e1d8;
 }
 
+.homeButton {
+    padding: 1rem 2rem;
+    margin: 1rem;
+
+    border-radius: 0 20px 0 20px;
+    border: 0.2rem solid rgb(153, 172, 238);
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+
+    background: #0d0e12;
+    color: #e6e1d8;
+}
+
+.homeButton:hover {
+    padding: 1rem 2rem;
+    margin: 1rem;
+
+    border: 0.2rem solid rgb(219, 155, 35);
+
+    background: #d8c663;
+    color: #25231f;
+}
+
+.homeButton a {
+    text-decoration: none;
+    color: #e6e1d8;
+
+}
+
+.homeButton a:hover {
+    text-decoration: none;
+    color: #25231f;
+}
+
 #video {
     position: fixed;
     right: 0;
@@ -177,12 +212,22 @@ h1 {
     animation: float 3s infinite ease-in-out;
 }
 
+p {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-kerning: normal;
+}
+
 body {
     display: flex;
-    justify-self: center;
-    justify-content: center;
     width: 100vw;
     height: 100vh;
+}
+
+.pageContent {
+    display: grid;
+    width: 100vw;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .gameContent {
@@ -190,23 +235,30 @@ body {
     flex-direction: row;
 }
 
-/*Container*/
+.gameDescription {
+    grid-column: 3/4;
+    margin: 4rem 8rem 0 auto;
+}
+
+.gameDescription *{
+    text-align: right;
+}
+
+/*Body Container*/
 
 #bodyContainer {
-    width: 400px;
-    height: 700px;
-    transform: scale(0.5);
+    transform: scale(0.6);
+    position: relative;
 }
 
 #background {
     position: absolute;
-
     width: 800px;
     height: 1400px;
     background-image: url("./img/bg.png");
-    background-color: #c1d7ec8a;
     border-radius: 100px;
     z-index: -500;
+    filter: drop-shadow(0 0 5rem rgb(38, 48, 61));
 }
 
 #backgroundAccent {
@@ -256,6 +308,7 @@ body {
     background-image: url("./img/dressup_0004s_0000_Base.png");
 }
 
+
 /*Button*/
 .buttonContainer {
     display: flex;
@@ -289,22 +342,4 @@ body {
 
 .currentHair {
     font-weight: 200;
-}
-
-/*Animation*/
-
-@keyframes float {
-    0% {
-        transform: translateY(-100px);
-    }
-
-    50% {
-        transform: translateY(0px);
-
-    }
-
-    100% {
-        transform: translateY(-100px);
-
-    }
 }
