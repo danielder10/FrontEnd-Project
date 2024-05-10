@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dress Up!</title>
+  <link rel="stylesheet" href="./Game4styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body class="appBody">
+  <video autoplay muted loop id="video">
+    <source src="./videos/Background_1.mp4" type="video/mp4">
+  </video>
+  <div class="pageContent">
+    <div class="gameContent">
+      <div class="buttonContainer">
+        <button id="changeHair" class="clothesButton">
+          Change Hair
+          <p class="label">Current Hair: <i id="currentHair"></i></p>
+        </button>
+        <button id="changeEyes" class="clothesButton">
+          Change Eyes
+          <p class="label">Current Eyes: <i id="currentEyes"></i></p>
+        </button>
+        <button id="changeClothes" class="clothesButton">
+          Change Clothes
+          <p class="label">Current Clothes: <i id="currentClothes"></i></p>
+        </button>
+        <button id="changePants" class="clothesButton">
+          Change Pants
+          <p class="label">Current Pants: <i id="currentPants"></i></p>
+        </button>
+        <button id="changeAccessories" class="clothesButton">
+          Change Accessories
+          <p class="label">Current Accessories: <i id="currentAccessories"></i></p>
+        </button>
+        <div>
+          <button class="homeButton"><a href="../Home Page/index.html">Back</a></button>
+        </div>
+      </div>
+      <div id="bodyContainer">
+        <div id="background">
+          <div id="backgroundAccent">
+            <div id="hair"></div>
+            <div id="eyes"></div>
+            <div id="clothes"></div>
+            <div id="pants"></div>
+            <div id="body"></div>
+            <div id="accessories"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="gameDescription">
+      <h1>Dress Up!</h1>
+      <p>Customize Your character using the buttons using preset looks!</p>
+    </div>
+  </div>
+  <!-- <div id="demo" style="height: 250px; width: 100px; background-color: red;">oooguyfsdhfuahjfsj</div> -->
+
+  <script src="./Game4script.js"></script>
+</body>
+
+</html>
