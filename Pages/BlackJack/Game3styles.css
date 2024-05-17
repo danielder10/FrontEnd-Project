@@ -1,10 +1,28 @@
+body{
+    margin: 0;
+}
+
+h1, div{
+    font-family: "Rubik", sans-serif;
+    color: white;
+}
+
+
 .BJContainer{
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
+    
     display: flex;
     justify-content: center;
     align-content: center;
     align-items: center;
     flex-direction: column;
+
+    background-image: url('images/BJBG.png');
+    background-size: cover; /* Ensures the background image covers the entire container */
+    background-position: center; /* Centers the background image */
+
+    margin: 0;
 }
 
 .tableContainer{
@@ -26,10 +44,45 @@
     display: flex;
     margin: 2rem;
     padding: 1rem;
+
 }
 
 .actionButton{
     width: 5rem;
     padding:1rem;
     margin: 2rem;
+
+    color: black;
 }
+
+.person{
+    width:100px;
+    height:100px;
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; 
+}
+
+.kingImage.ok {
+    background-image: url('images/king_ok.svg');
+  }
+  
+  .kingImage.good {
+    background-image: url('images/king_good.svg');
+  }
+  
+  .kingImage.bad {
+    background-image: url('images/king_bad.svg');
+  }
+  
+  .knightImage.ok {
+    background-image: url('images/knight_ok.svg');
+  }
+  
+  .knightImage.good {
+    background-image: url('images/knight_good.svg');
+  }
+  
+  .knightImage.bad {
+    background-image: url('images/knight_bad.svg');
+  }
+  

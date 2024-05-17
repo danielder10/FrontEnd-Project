@@ -70,13 +70,53 @@ function stand() {
   }
 }
 
-// Function to update hands
 function updateHands() {
   playerSum = calculateSum(playerHand);
   dealerSum = calculateSum(dealerHand);
-  document.getElementById('Player').innerText = `Player (${playerSum})`;
-  document.getElementById('Dealer').innerText = `Dealer (${dealerSum})`;
+  document.getElementById('Player').innerText = `Player`;
+  document.getElementById('Dealer').innerText = `Dealer`;
+
+  // Update the card sum placeholders where it is xx
+  document.getElementById('cardSumPlayer').innerText = playerSum;
+  document.getElementById('cardSumDealer').innerText = dealerSum;
+
+  // Determine game state and change image classes accordingly
+  if (playerSum > 21 || (dealerSum <= 21 && dealerSum > playerSum)) {
+      document.querySelector('.knightImage').classList.add('good');
+      document.querySelector('.knightImage').classList.remove('ok');
+      document.querySelector('.knightImage').classList.remove('bad');
+      document.querySelector('.kingImage').classList.add('bad');
+      document.querySelector('.kingImage').classList.remove('ok');
+      document.querySelector('.kingImage').classList.remove('good');
+  } else if (dealerSum > 21 || (playerSum <= 21 && playerSum > dealerSum)) {
+      document.querySelector('.knightImage').classList.add('bad');
+      document.querySelector('.knightImage').classList.remove('ok');
+      document.querySelector('.knightImage').classList.remove('good');
+      document.querySelector('.kingImage').classList.add('good');
+      document.querySelector('.kingImage').classList.remove('ok');
+      document.querySelector('.kingImage').classList.remove('bad');
+  } else {
+      document.querySelector('.knightImage').classList.add('ok');
+      document.querySelector('.knightImage').classList.remove('good');
+      document.querySelector('.knightImage').classList.remove('bad');
+      document.querySelector('.kingImage').classList.add('ok');
+      document.querySelector('.kingImage').classList.remove('good');
+      document.querySelector('.kingImage').classList.remove('bad');
+  }
 }
+
+  
+
+// Function to get value of cards using if else statement to 
+function getValue(cardValue) {
+    if (cardValue === 'J' || cardValue === 'Q' || cardValue === 'K') {
+      return 10;
+    } else if (cardValue === 'A') {
+      return 1;
+    } else {
+      return parseInt(cardValue);
+    }
+  }
 
 // Function to calculate sum of cards
 function calculateSum(hand) {
@@ -87,6 +127,7 @@ function calculateSum(hand) {
       hasAce = true;
     }
     sum += getValue(card.value);
+    //takes the getValue function and 
   }
   if (hasAce && sum + 10 <= 21) {
     sum += 10;
@@ -94,30 +135,49 @@ function calculateSum(hand) {
   return sum;
 }
 
-// Function to get value of cards
-function getValue(cardValue) {
-  if (cardValue === 'J' || cardValue === 'Q' || cardValue === 'K') {
-    return 10;
-  } else if (cardValue === 'A') {
-    return 1;
-  } else {
-    return parseInt(cardValue);
-  }
-}
-
 // Function to end game
 function endGame(message) {
-  gameOver = true;
-  document.getElementById('result').innerText = message;
-  document.getElementById('deal').disabled = false;
-  document.getElementById('hit').disabled = true;
-  document.getElementById('stand').disabled = true;
+    gameOver = true;
+    document.getElementById('result').innerText = message;
+    document.getElementById('deal').disabled = false;
+    document.getElementById('hit').disabled = true;
+    document.getElementById('stand').disabled = true;
+    document.getElementById('playAgain').disabled = false;
 }
+
+
 
 // Initialize game
 createDeck();
 
-// Add event listeners
+// Add event listeners from the ID to the function
 document.getElementById('deal').addEventListener('click', deal);
 document.getElementById('hit').addEventListener('click', hit);
 document.getElementById('stand').addEventListener('click', stand);
+
+// Function to reset the game
+function resetGame() {
+    //clear the hands of the plater and the dealer
+    playerHand = [];
+    dealerHand = [];
+    playerSum = 0;
+    dealerSum = 0;
+    gameOver = false;
+    //quick lil reset
+    document.getElementById('result').innerText = '';
+    document.getElementById('deal').disabled = false;
+    document.getElementById('hit').disabled = true;
+    document.getElementById('stand').disabled = true;
+    document.getElementById('playAgain').disabled = true;
+    document.getElementById('cardSumPlayer').innerText = 'xx';
+    document.getElementById('cardSumDealer').innerText = 'hi';
+  }
+  
+  // Add event listener for Play Again button
+  document.getElementById('playAgain').addEventListener('click', resetGame);
+  
+//function to reload the page
+function resetGame() {
+  // Reload the page
+  location.reload();
+}
