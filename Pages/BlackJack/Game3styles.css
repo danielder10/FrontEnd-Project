@@ -1,12 +1,19 @@
 body{
     margin: 0;
+    /* height: 100rem; */
 }
 
-h1, div{
+div{
     font-family: "Rubik", sans-serif;
     color: white;
 }
 
+h1{
+    font-family: "Rye", "Rubik", Arial, Helvetica, sans-serif;
+    font-size: 5rem;
+    font-weight: 100;
+    margin-bottom: 1rem;
+}
 
 .BJContainer{
     width: 100vw;
@@ -25,19 +32,47 @@ h1, div{
     margin: 0;
 }
 
+.inital{
+    margin: 0 0 2rem;
+}
+
 .tableContainer{
+    width: 50rem;
     display: flex;
     justify-content: center;
     align-content: center;
+    flex-direction: column;
+
+    background-image: url('images/Asset\ 5.svg');
+
+    background-repeat: no-repeat;
+}
+
+.table{
+    /* width: 50rem; */
+    height: 30rem;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 .seat{
-    width: 15rem;
+    width: 30rem;
     height: 5rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.seatHouse, .seatPlayer{
+    flex-direction: row;
 }
 
 .buttonContainer{
@@ -48,18 +83,61 @@ h1, div{
 }
 
 .actionButton{
-    width: 5rem;
+    width: 6rem;
     padding:1rem;
-    margin: 2rem;
+    margin: 0.5rem;
 
     color: black;
+    background-color: rgb(209, 168, 52);
+
+    border-radius: 2rem;
+}
+
+.buttonGreen{
+    background-color: rgb(52, 109, 38);
+    color: white;
+}
+
+.buttonRed{
+    background-color: rgb(221, 99, 51);
+    color: white;
+
+}
+
+button:disabled{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+.player{
+    font-size: 2.5rem;
+
+    /* display: flex;
+
+    justify-content: center; */
+}
+
+.sum{
+    font-size: 1.5rem;
 }
 
 .person{
-    width:100px;
-    height:100px;
+    width:200px;
+    height:200px;
     background-position: center; /* Centers the background image */
     background-repeat: no-repeat; 
+}
+
+.knightImage{
+    position: relative;
+    top: -2rem;
+    right: 8rem;
+}
+
+.kingImage{
+    position: relative;
+    left: 8rem;
 }
 
 .kingImage.ok {
@@ -86,3 +164,7 @@ h1, div{
     background-image: url('images/knight_bad.svg');
   }
   
+
+.result{
+    font-size: 1.5rem;
+}
