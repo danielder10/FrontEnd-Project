@@ -1,23 +1,71 @@
-.choiceBtn{
-    line-height: 30px;
-    width: 150px;
-}
-#gameDiv{
-    font-family: 'Poppins', sans-serif;
-    border: 3px solid;
-    border-radius: 25px;
-    padding: 10px;
-    background-color: lightgrey;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  
+  .back-button button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .back-button button a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  #gameDiv {
+    background-color: white;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-}
-#playerText{
-    color: #4fff38;
-}
-#computerText{
-    color: #ff0000;
-}
-#sectionScore{
-  display:flex;
-  flex-direction:row;
-  justify-content:center;
-}
+  }
+  
+  .gameText {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+  
+  .button-container {
+    margin-top: 20px;
+  }
+  
+  .game-button {
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px;
+  }
+  
+  .game-button:hover {
+    background-color: #005f73;
+  }
+  
+  #result {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
