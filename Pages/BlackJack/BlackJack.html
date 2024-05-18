@@ -6,37 +6,51 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blackjack</title>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="/Pages/BlackJack/Game3styles.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
   <div class="BJContainer">
     <h1 class="Header">Blackjack</h1>
+    <p class="inital">Hit Deal to Begin</p>
 
     <div class="tableContainer">
-      <div class="seat seatHouse">
-        <div id="Dealer">Dealer</div>
-        <div id="cardSum">xx</div>
+
+      <div class="table">
+        <div class="knightImage person"></div>
+        <div class="seat seatHouse">
+          <div class="player" id="Dealer">Dealer</div>
+          <div class="sum" id="cardSumDealer"></div>
+        </div>
+        <div class="seat seatPlayer">
+          <div class="player" id="Player">Player</div>
+          <div class="sum" id="cardSumPlayer"></div>
+        </div>
+        <div class="kingImage person"></div>
       </div>
-      <div class="seat seatPlayer">
-        <div id="Player">Player</div>
-        <div id="cardSum">xx</div>
-      </div>
-    </div>
+    </div>  
+
+    <!-- <div>
+      <div>hit deal to begin</div>
+    </div> -->
 
     <div class="buttonContainer">
       <button class="actionButton" id="deal">Deal</button>
-      <button class="actionButton" id="hit" disabled>Hit</button>
-      <button class="actionButton" id="stand" disabled>Stand</button>
+      <button class="actionButton buttonGreen" id="hit" disabled>Hit</button>
+      <button class="actionButton buttonRed" id="stand" disabled>Stand</button>
+      <button class="actionButton" id="playAgain" disabled>Play Again</button>
     </div>
 
-    <div id="result"></div>
+    <div class="result" id="result"></div>
 
-  </div>
-
-  <div>
-    <button><a href="../Home Page/index.html">Back</a></button>
   </div>
 
   <script src="./Game3script.js"></script>

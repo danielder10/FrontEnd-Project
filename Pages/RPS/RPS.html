@@ -3,30 +3,31 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatiable" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rock Paper Scissors</title>
   <link rel="stylesheet" href="RPSstyles.css">
 </head>
 
 <body>
-<div>
+  <div class="back-button">
     <button><a href="../Home Page/index.html">Back</a></button>
-</div>
-<br>
+  </div>
+  
   <div id="gameDiv">
     <h1 class="gameText" id="playerText">Player: </h1>
     <h1 class="gameText" id="computerText">Computer: </h1>
 
-    <button onClick="checker('rock'); displayRock()">Rock</button>
-    <button onClick="checker('paper'); displayPaper()"> Paper</button>
-    <button onClick="checker('scissor'); displayScissors()">Scissor</button>
-    <p id="result">
-    </p>
+    <div class="button-container">
+      <button class="game-button" onClick="checker('rock'); displayRock()">Rock</button>
+      <button class="game-button" onClick="checker('paper'); displayPaper()">Paper</button>
+      <button class="game-button" onClick="checker('scissor'); displayScissors()">Scissor</button>
+    </div>
+    
+    <p id="result"></p>
   </div>
 
   <script src="RPSscript.js"></script>
-
 </body>
 
 </html>
