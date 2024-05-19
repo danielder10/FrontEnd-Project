@@ -17,15 +17,43 @@ const WINNING_COMBINATIONS = [
 ];
 let oTurn;
 
-startGame();
-
-restartButton.addEventListener('click', startGame);
+function goBack() {
+    window.location.href = "../Home Page/index.html";
+}
 
 function startGame() {
+    document.getElementById('overlay').style.display = 'none';
+    playSound('game-start.mp3');
+    initGame();
+}
+
+function restartGame() {
+    playSound('game-start.mp3');
+    initGame();
+}
+
+function playSound(filename) {
+    const audio = new Audio(`../TicTacToe/sounds/${filename}`);
+    audio.play();
+}
+
+window.onload = function() {
+    document.getElementById('overlay').style.display = 'flex';
+}
+
+function initGame() {
     oTurn = false;
     cells.forEach(cell => {
-        cell.classList.remove(X_CLASS);
-        cell.classList.remove(O_CLASS);
+        cell.classList.remove(X_CLASS, O_CLASS, 'show-x', 'show-o');
+        cell.querySelectorAll('svg').forEach(svg => {
+            svg.querySelectorAll('line, circle').forEach(element => {
+                requestAnimationFrame(() => {
+                    if (element instanceof SVGGeometryElement) {
+                        element.style.strokeDashoffset = element.getTotalLength();
+                    }
+                });
+            });
+        });
         cell.removeEventListener('click', handleClick);
         cell.addEventListener('click', handleClick, { once: true });
     });
@@ -34,12 +62,15 @@ function startGame() {
 }
 
 function handleClick(e) {
-    const cell = e.target;
+    const cell = e.target.closest('.cell');
     const currentClass = oTurn ? O_CLASS : X_CLASS;
     placeMark(cell, currentClass);
+    playSound('piece-place.mp3');
     if (checkWin(currentClass)) {
+        console.log("Win detected");
         endGame(false);
     } else if (isDraw()) {
+        console.log("Draw detected");
         endGame(true);
     } else {
         swapTurns();
@@ -48,6 +79,7 @@ function handleClick(e) {
 }
 
 function endGame(draw) {
+    playSound('game-end.mp3');
     if (draw) {
         winningMessageTextElement.innerText = 'Draw!';
     } else {
@@ -58,12 +90,16 @@ function endGame(draw) {
 
 function isDraw() {
     return [...cells].every(cell => {
-        return cell.classList.contains(X_CLASS) || cell.classList.contains(O_CLASS);
+        return cell.classList.contains('show-x') || cell.classList.contains('show-o');
     });
 }
 
 function placeMark(cell, currentClass) {
-    cell.classList.add(currentClass);
+    if (currentClass === X_CLASS) {
+        cell.classList.add('show-x');
+    } else {
+        cell.classList.add('show-o');
+    }
 }
 
 function swapTurns() {
@@ -71,8 +107,7 @@ function swapTurns() {
 }
 
 function setBoardHoverClass() {
-    gameBoard.classList.remove(X_CLASS);
-    gameBoard.classList.remove(O_CLASS);
+    gameBoard.classList.remove(X_CLASS, O_CLASS);
     if (oTurn) {
         gameBoard.classList.add(O_CLASS);
     } else {
@@ -83,7 +118,8 @@ function setBoardHoverClass() {
 function checkWin(currentClass) {
     return WINNING_COMBINATIONS.some(combination => {
         return combination.every(index => {
-            return cells[index].classList.contains(currentClass);
+            const cell = cells[index];
+            return cell.classList.contains(currentClass === X_CLASS ? 'show-x' : 'show-o');
         });
     });
 }
