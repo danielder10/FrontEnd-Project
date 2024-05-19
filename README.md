@@ -1,4 +1,4 @@
-# Title
+# D3 Minigames
 
 # Created By
 - Daniel Der A01369032
