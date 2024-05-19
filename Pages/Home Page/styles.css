@@ -1,3 +1,12 @@
+.headerText{
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-size: 4rem;
+}
+h4{
+    font-size: 1.5rem;
+    margin: 0;
+}
+
 .RPS{
     color: Blue;
     align-items: center;
@@ -8,17 +17,71 @@ a {
     text-decoration: none; 
 }
 
-button {
-    width: 100px; 
-    height: 100px; 
+.link {
+    width: 50vw; 
+    height: 100vh; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: darkslateblue;
+}
+
+.BodyContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.headerbody{
+    display: flex;
+}
+
+.bodybody{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.linkText{
+    color: white;
+    width: 25vw;
+    height: 100vh;
+
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.BodyContainer{
-    display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+.buttonlink{
+    text-decoration: none;
+    color: white;
 }
+
+.buttonlink:link{
+    text-decoration: none;
+    color: white;
+}
+
+.BlackJack{
+    background-image: url(../BlackJack/images/BJBG.png);
+    height: 100%;
+
+    color: white;
+
+    font-family: "Rye";
+    font-size: 3rem;
+}
+
+.Dress{
+    background-image: url(../Dressup/img/BGDress.png);
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 3rem;
+}
+
