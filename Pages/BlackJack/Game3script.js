@@ -18,6 +18,9 @@ function createDeck() {
   deck = shuffle(deck);
 }
 
+// Initialize game
+createDeck();
+
 // shuffle time
 function shuffle(deck) {
   for (let i = deck.length - 1; i > 0; i--) {
@@ -25,6 +28,34 @@ function shuffle(deck) {
     [deck[i], deck[j]] = [deck[j], deck[i]];
   }
   return deck;
+}
+
+// Function to get value of cards using if else statement to 
+function getValue(cardValue) {
+  if (cardValue === 'J' || cardValue === 'Q' || cardValue === 'K') {
+    return 10;
+  } else if (cardValue === 'A') {
+    return 1;
+  } else {
+    return parseInt(cardValue);
+  }
+}
+
+// Function to calculate sum of cards
+function calculateSum(hand) {
+let sum = 0;
+let hasAce = false;
+for (let card of hand) {
+  if (card.value === 'A') {
+    hasAce = true;
+  }
+  sum += getValue(card.value);
+  //takes the getValue function and 
+}
+if (hasAce && sum + 10 <= 21) {
+  sum += 10;
+}
+return sum;
 }
 
 // waits for the button of deal 
@@ -105,35 +136,6 @@ function updateHands() {
   }
 }
 
-  
-
-// Function to get value of cards using if else statement to 
-function getValue(cardValue) {
-    if (cardValue === 'J' || cardValue === 'Q' || cardValue === 'K') {
-      return 10;
-    } else if (cardValue === 'A') {
-      return 1;
-    } else {
-      return parseInt(cardValue);
-    }
-  }
-
-// Function to calculate sum of cards
-function calculateSum(hand) {
-  let sum = 0;
-  let hasAce = false;
-  for (let card of hand) {
-    if (card.value === 'A') {
-      hasAce = true;
-    }
-    sum += getValue(card.value);
-    //takes the getValue function and 
-  }
-  if (hasAce && sum + 10 <= 21) {
-    sum += 10;
-  }
-  return sum;
-}
 
 // Function to end game
 function endGame(message) {
@@ -145,10 +147,6 @@ function endGame(message) {
     document.getElementById('playAgain').disabled = false;
 }
 
-
-
-// Initialize game
-createDeck();
 
 // Add event listeners from the ID to the function
 document.getElementById('deal').addEventListener('click', deal);
@@ -171,13 +169,11 @@ function resetGame() {
     document.getElementById('playAgain').disabled = true;
     document.getElementById('cardSumPlayer').innerText = 'xx';
     document.getElementById('cardSumDealer').innerText = 'hi';
+
+    // Reload the page
+    location.reload();
   }
   
   // Add event listener for Play Again button
   document.getElementById('playAgain').addEventListener('click', resetGame);
   
-//function to reload the page
-function resetGame() {
-  // Reload the page
-  location.reload();
-}
