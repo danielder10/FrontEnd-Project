@@ -43,6 +43,12 @@ body::before {
   z-index: 1001;
 }
 
+.currentTurn {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 20px;
+}
+
 .modal {
   background-color: white;
   padding: 20px;
@@ -115,7 +121,7 @@ body::before {
 }
 
 .line1, .line2 {
-  stroke: red;
+  stroke: rgb(110, 9, 9);
   stroke-width: 10;
   stroke-linecap: round;
   stroke-dasharray: 113;
@@ -135,7 +141,7 @@ body::before {
 
 circle {
   fill: none;
-  stroke: blue;
+  stroke: rgb(83, 83, 182);
   stroke-width: 10;
   stroke-dasharray: 251.2;
   stroke-dashoffset: 251.2;
