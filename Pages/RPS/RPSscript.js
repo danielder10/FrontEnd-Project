@@ -1,75 +1,53 @@
 let userscore = 0, cpuscore = 0;
-const playerText = document.querySelector("#playerText");
-const computerText = document.querySelector("#computerText");
-const resultText = document.querySelector("#resultText");
-const choiceBtns = document.querySelectorAll(".choiceBtn");
+const playerImage = document.querySelector("#playerImage");
+const computerImage = document.querySelector("#computerImage");
+const resultText = document.querySelector("#result");
 let player;
 let computer;
 let result;
 
-choiceBtns.forEach(button => button.addEventListener("click", () => {
-
-  player = button.textContent;
+function makeChoice(choice) {
+  player = choice;
   computerTurn();
-  playerText.textContent = `Player: ${player}`;
-  computerText.textContent = `Computer: ${computer}`;
+  updateImages();
   resultText.textContent = checkWinner();
-}));
+}
+
 let choicesObject = {
   'rock': {
     'rock': 'draw',
-    'scissor': 'win',
+    'scissors': 'win',
     'paper': 'lose'
   },
-  'scissor': {
+  'scissors': {
     'rock': 'lose',
-    'scissor': 'draw',
+    'scissors': 'draw',
     'paper': 'win'
   },
   'paper': {
     'rock': 'win',
-    'scissor': 'lose',
+    'scissors': 'lose',
     'paper': 'draw'
   }
-}
-function displayRock() {
-  document.getElementById("playerText").innerHTML = "Player: Rock";
-}
-function displayPaper() {
-  document.getElementById("playerText").innerHTML = "Player: Paper";
-}
-function displayScissors() {
-  document.getElementById("playerText").innerHTML = "Player: Scissors";
+};
+
+function computerTurn() {
+  const choices = ["rock", "paper", "scissors"];
+  const randomIndex = Math.floor(Math.random() * 3);
+  computer = choices[randomIndex];
 }
 
-function checker(input) {
-  var choices = ["rock", "paper", "scissor"];
-  var num = Math.floor(Math.random() * 3);
+function updateImages() {
+  playerImage.src = `images/${player}.png`;
+  computerImage.src = `images/${computer}.png`;
+}
 
-  if (num == 0) {
-    document.getElementById("computerText").innerHTML = "Computer: Rock";
+function checkWinner() {
+  if (choicesObject[player][computer] === 'win') {
+    return "CONGRATS! YOU WIN!";
+  } else if (choicesObject[player][computer] === 'lose') {
+    return "SORRY! YOU LOSE!";
+  } else {
+    return "IT'S A DRAW!";
   }
-  else if (num == 1) {
-    document.getElementById("computerText").innerHTML = "Computer: Paper";
-  }
-  else if (num == 2) {
-    document.getElementById("computerText").innerHTML = "Computer: Scissors";
-  }
-
-  let computerChoice = choices[num];
-  let result
-
-  switch (choicesObject[input][computerChoice]) {
-    case 'win':
-      result = "CONGRATS! YOU WIN!";
-      break;
-    case 'lose':
-      result = "SORRY! YOU LOSE!";
-      break;
-    default:
-      result = "IT'S A DRAW!";
-      break;
-  }
-  console.log(result);
-  document.getElementById('result').textContent = result;
 }

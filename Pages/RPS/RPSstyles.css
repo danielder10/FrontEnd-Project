@@ -6,7 +6,12 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    width:100%;
     margin: 0;
+
+    background-image: url("./images/RPSbg.jpeg");
+    background-size: cover;
+    background-position: center; 
   }
   
   .back-button {
@@ -39,11 +44,6 @@ body {
     text-align: center;
   }
   
-  .gameText {
-    font-size: 24px;
-    margin: 10px 0;
-  }
-  
   .button-container {
     margin-top: 20px;
   }
@@ -68,4 +68,15 @@ body {
     font-size: 20px;
     font-weight: bold;
   }
+
+  #playerImage, #computerImage {
+    display: block;
+    margin-top: 20px; 
+    width:80px;
+  }
   
+  .gameText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
