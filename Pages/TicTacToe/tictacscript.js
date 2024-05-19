@@ -3,6 +3,7 @@ const gameBoard = document.getElementById('gameBoard');
 const winningMessageElement = document.getElementById('winningMessage');
 const winningMessageTextElement = document.getElementById('winningMessageText');
 const restartButton = document.getElementById('restartButton');
+const currentTurnElement = document.getElementById('currentTurn');
 const X_CLASS = 'x';
 const O_CLASS = 'o';
 const WINNING_COMBINATIONS = [
@@ -43,6 +44,7 @@ window.onload = function() {
 
 function initGame() {
     oTurn = false;
+    updateTurnIndicator();
     cells.forEach(cell => {
         cell.classList.remove(X_CLASS, O_CLASS, 'show-x', 'show-o');
         cell.querySelectorAll('svg').forEach(svg => {
@@ -75,6 +77,7 @@ function handleClick(e) {
     } else {
         swapTurns();
         setBoardHoverClass();
+        updateTurnIndicator();
     }
 }
 
@@ -113,6 +116,10 @@ function setBoardHoverClass() {
     } else {
         gameBoard.classList.add(X_CLASS);
     }
+}
+
+function updateTurnIndicator() {
+    currentTurnElement.innerText = `Current Turn: ${oTurn ? "O" : "X"}`;
 }
 
 function checkWin(currentClass) {
