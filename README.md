@@ -8,3 +8,11 @@
 # Class + Set
 - COMP-2170-0
 - Set G
+
+## How to Run the Game
+1. Download the live preview extension
+2. Run the html file for Home Page using the extension
+
+or
+
+- Use the vercel link

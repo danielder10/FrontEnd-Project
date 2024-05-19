@@ -87,3 +87,9 @@ button {
     background-image: url("../BlackJack/images/BJBG.png");
     font-family: "Rye";
 }
+
+.Game4 {
+    background-image: url("../Dressup/img/BGDress.png");
+    font-family: "Inter";
+    font-weight: bold;
+}
