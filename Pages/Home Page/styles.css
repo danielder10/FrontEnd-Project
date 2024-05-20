@@ -88,6 +88,11 @@ button {
     font-family: "Rye";
 }
 
+.Game3{
+    background-image: url("../TicTacToe/images/wood.jpg");
+    font-family: Poppins;
+}
+
 .Game4 {
     background-image: url("../Dressup/img/BGDress.png");
     font-family: "Inter";
