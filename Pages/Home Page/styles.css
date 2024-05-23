@@ -2,11 +2,6 @@
 body{
     background-color: rgb(56, 56, 56);
 }
-  
-.RPS{
-    color: Blue;
-    align-items: center;
-}
 
 a {
     color: white; 
@@ -38,14 +33,30 @@ button {
 .link{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 25vw;
     height: 75vh;
 
     transition: transform 0.3s ease; 
+
+    border-top-width: 5px;
+    border-left-width: 2.5px;
+    border-right-width: 2.5px;
+    border-bottom-width: 5px;
+    border-style: solid;
+    border-color: grey;
 }
 
 .link:hover {
     transform: scale(1.1);
+    border-left-width: 5px;
+    border-right-width: 5px;
+    border-color: white;
+}
+
+.game{
+    text-align: center;
 }
 
 .author{
@@ -81,6 +92,12 @@ button {
 
 .item{
     margin-left: 2rem;
+}
+
+.RPS{
+    background-image: url("../RPS/images/RPSbgColor.png");
+    font-family: Poppins;
+    padding: 1rem;
 }
 
 .Game2{
