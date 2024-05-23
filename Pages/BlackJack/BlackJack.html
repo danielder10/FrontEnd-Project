@@ -20,7 +20,29 @@
 
   <div class="BJContainer">
     <h1 class="Header">Blackjack</h1>
-    <p class="inital">Hit Deal to Begin</p>
+    <!-- <p class="inital">Hit Deal to Begin</p> -->
+    <!-- <p class="inital">How to play</p> -->
+    <!-- <div class="instructions">
+      <p>Welcome to Blackjack! The goal of the game is to get a hand value as close to 21 as possible without going over. Face cards (Kings, Queens, and Jacks) are worth 10 points, Aces are worth either 1 or 11 points (whichever is more beneficial for your hand), and all other cards are worth their face value.</p>
+      <p>Gameplay:</p>
+      <ul>
+        <li><strong>Deal:</strong> Click the "Deal" button to start the game. You and the dealer will each receive two cards.</li>
+        <li><strong>Hit:</strong> Click the "Hit" button to draw another card. You can hit as many times as you want to improve your hand value, but be careful not to exceed 21.</li>
+        <li><strong>Stand:</strong> Click the "Stand" button when you are satisfied with your hand value.</li>
+        <li><strong>Play Again:</strong> Click the "Play Again" button to start a new game</li>
+      </ul>
+    </div> -->
+
+    <p>How to Win</p>
+    <ul>
+      <li>If your hand value exceeds 21, you bust and lose the game.</li>
+      <li>If the dealer busts, you win.</li>
+      <li>If your hand value is higher than the dealer's without exceeding 21, you win.</li>
+      <li>If your hand value is equal to the dealer's, it's a push (tie).</li>
+      <li>Hit Deal to Begin</li>
+    </ul>
+    <p>Good luck and have fun!</p>
+
 
     <div class="tableContainer">
 
@@ -38,16 +60,13 @@
       </div>
     </div>  
 
-    <!-- <div>
-      <div>hit deal to begin</div>
-    </div> -->
-
     <div class="buttonContainer">
       <button class="actionButton" id="deal">Deal</button>
       <button class="actionButton buttonGreen" id="hit" disabled>Hit</button>
       <button class="actionButton buttonRed" id="stand" disabled>Stand</button>
       <button class="actionButton" id="playAgain" disabled>Play Again</button>
     </div>
+    
 
     <div class="result" id="result"></div>
     <div class="back-button">

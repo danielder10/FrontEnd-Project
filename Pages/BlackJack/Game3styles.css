@@ -15,6 +15,10 @@ h1{
     margin-bottom: 1rem;
 }
 
+a{
+    text-decoration: none;
+}
+
 .BJContainer{
     width: 100vw;
     height: 100vh;
@@ -26,14 +30,19 @@ h1{
     flex-direction: column;
 
     background-image: url('images/BJBG.png');
-    background-size: cover; /* Ensures the background image covers the entire container */
-    background-position: center; /* Centers the background image */
+    background-size: cover; 
+    background-position: center; 
 
     margin: 0;
 }
 
 .inital{
     margin: 0 0 2rem;
+}
+
+.instructions{
+    width: 70rem;
+    margin: 1rem;
 }
 
 .tableContainer{
@@ -93,6 +102,11 @@ h1{
     border-radius: 2rem;
 }
 
+.buttonlink{
+    text-decoration: none;
+    color: black;
+}
+
 .buttonGreen{
     background-color: rgb(52, 109, 38);
     color: white;
@@ -125,7 +139,7 @@ button:disabled{
 .person{
     width:200px;
     height:200px;
-    background-position: center; /* Centers the background image */
+    background-position: center; 
     background-repeat: no-repeat; 
 }
 

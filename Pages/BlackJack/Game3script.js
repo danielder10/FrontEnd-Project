@@ -167,8 +167,8 @@ function resetGame() {
     document.getElementById('hit').disabled = true;
     document.getElementById('stand').disabled = true;
     document.getElementById('playAgain').disabled = true;
-    document.getElementById('cardSumPlayer').innerText = 'xx';
-    document.getElementById('cardSumDealer').innerText = 'hi';
+    document.getElementById('cardSumPlayer').innerText = '';
+    document.getElementById('cardSumDealer').innerText = '';
 
     // Reload the page
     location.reload();
