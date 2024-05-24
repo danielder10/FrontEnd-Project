@@ -59,7 +59,6 @@ function initGame() {
         cell.removeEventListener('click', handleClick);
         cell.addEventListener('click', handleClick, { once: true });
     });
-    setBoardHoverClass();
     winningMessageElement.classList.remove('show');
 }
 
@@ -69,14 +68,11 @@ function handleClick(e) {
     placeMark(cell, currentClass);
     playSound('piece-place.mp3');
     if (checkWin(currentClass)) {
-        console.log("Win detected");
         endGame(false);
     } else if (isDraw()) {
-        console.log("Draw detected");
         endGame(true);
     } else {
         swapTurns();
-        setBoardHoverClass();
         updateTurnIndicator();
     }
 }
@@ -107,15 +103,6 @@ function placeMark(cell, currentClass) {
 
 function swapTurns() {
     oTurn = !oTurn;
-}
-
-function setBoardHoverClass() {
-    gameBoard.classList.remove(X_CLASS, O_CLASS);
-    if (oTurn) {
-        gameBoard.classList.add(O_CLASS);
-    } else {
-        gameBoard.classList.add(X_CLASS);
-    }
 }
 
 function updateTurnIndicator() {
